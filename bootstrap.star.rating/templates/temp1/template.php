@@ -32,8 +32,7 @@ $id = isset($arParams['ELEMENT_ID']) ? $arParams['ELEMENT_ID'] : 1;
         // записываем в инпут
         $inp = jQuery("#input-<?=$id;?>")
             $inp.on('rating:change', function (event, value, caption) {
-                $('#477').val(value)
-            });
+                $('[name="PROPERTY\\[<?=$arParams['STAR_RATE']?>\\]\\[0\\]"]').val(value)            });
     });
     
 </script>
