@@ -1,21 +1,16 @@
-Комопнент на основе bootstrap-star-rating для вывода звездочек к элементу (оценка). Свойство STAR_RATE.  В форме должен быть hidden инпут с атрибутом name="PROPERTY[ид св-ва][0]. В параметрах компонента указываем ид св-ва STAR_RATE. 
+Комопнент на основе **bootstrap-star-rating** для вывода рейтинга к элементу (оценка).
 
-Для заполненного свойства выводит статичные звезды, 
+Запись происходит в стандартные свойства *rating*, *vote_count*, *vote_sum*.
 
-```php
-$APPLICATION->IncludeComponent("bx:bootstrap.star.rating","temp1",
-  Array('ELEMENT_ID' => $arItem['ID'], 'STAR_RATE' => '477'),
-  $component
-);
-```
+Альтернатива компоненту **iblock.vote**, не использует формулу Экслера для расчета.
 
-для незаполненного - динамический. 
+Для вывода в *template.php* нужно добавить контейнер с классом **star-rating-container1**
+Сам компонент подключается в **element.php** после *catalog.element*.
 
 ```php
-$APPLICATION->IncludeComponent("bx:bootstrap.star.rating","temp1",
-  Array('ELEMENT_ID' => '', 'STAR_RATE' => '503'),
-  $component
-);
+$APPLICATION->IncludeComponent("bitrix:bootstrap.star.rating", "", array(
+        "IBLOCK_ID"  => "12",
+        "ELEMENT_ID" => $elementId,
+        "SIZE"       => "md",
+), $component);
 ```
-
-
