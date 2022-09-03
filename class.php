@@ -12,7 +12,7 @@ use Bitrix\Main\Web\Json;
 
 Loc::loadMessages(__FILE__);
 
-class B24CButtonsListComponent extends \CBitrixComponent
+class BootstrapStarRating extends \CBitrixComponent
 {
 	public function executeComponent()
     {
