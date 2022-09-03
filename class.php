@@ -3,12 +3,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true)
 	die();
 
 use Bitrix\Main\Localization\Loc;
-use Bitrix\B24Connector\Button;
-use Bitrix\Main\Type\DateTime;
-use Bitrix\Main\Type\Date;
 use Bitrix\Main\Loader;
-use Bitrix\Main\Context;
-use Bitrix\Main\Web\Json;
 
 Loc::loadMessages(__FILE__);
 
